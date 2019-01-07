@@ -24,6 +24,7 @@ class recipeEdit extends React.Component {
 
         return(
            <DefaultLayout>
+                <script src="/formscript.js"/>
                     <h5 className="h5">Edit Recipe</h5>
                     <form method='POST' action={'/recipes/'+ this.props.id+ '?_method=PUT'}>
                         <div className="form-group">
@@ -40,6 +41,7 @@ class recipeEdit extends React.Component {
                             <h3>Ingredients</h3>
                             {ingredients}
                         </div>
+                        {DefaultLayout.renderButton("Add Ingredients")}
                         <div className="form-group">
                             <h3>Instructions</h3>
                                 <textarea name="Instructions" value={this.props.edit.Instructions} cols="50" rows="15" maxLength="750" className="form-control"></textarea><br/>

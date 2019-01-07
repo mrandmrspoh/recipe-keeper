@@ -1,6 +1,12 @@
 var React = require('react');
 
 class DefaultLayout extends React.Component {
+    static renderButton(buttonText){
+        return (
+            <button type="button" id={buttonText.replace(" ", "-").toLowerCase()}>{buttonText}</button>
+        )
+    }
+
     render() {
         return (
 

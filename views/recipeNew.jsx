@@ -22,6 +22,7 @@ class recipeNew extends React.Component {
 
         return (
            <DefaultLayout>
+                <script src="/formscript.js"/>
                     <h5 class="h5">Fill up the form below to contribute a new recipe</h5>
                     <form method='POST' action='/recipes'>
                         <div className="form-group">
@@ -40,6 +41,7 @@ class recipeNew extends React.Component {
                             <h3>Ingredients</h3>
                             {ingredients}
                         </div>
+                        {DefaultLayout.renderButton("Add Ingredients")}
                         <div className="form-group">
                             <h3>Instructions</h3>
                                 <textarea name="Instructions" cols="50" rows="15" maxLength="750" className="form-control"></textarea><br/>

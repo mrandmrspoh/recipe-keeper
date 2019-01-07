@@ -147,7 +147,7 @@ app.put('/recipes/:id', (request, response) => {
         editRecipe.Image = request.body.Image;
         editRecipe.Instructions = request.body.Instructions;
         editRecipe.Ingredients = [];
-        for (i = 0; i<7; i ++) {
+        for (i = 0; i<Object.keys(request.body).length; i ++) {
             request.body["Name"+i]?
             editRecipe.Ingredients.push ({
                 "Name": request.body["Name"+i],
